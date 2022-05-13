@@ -1,0 +1,25 @@
+{
+  "name": "prog_fonctionnel_",
+  "version": "1.0.0",
+  "description": "Maxime Chardon\r Quentin Lecomte\r Julien Leplat\r Clément Moing",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julien-leplat/Prog_fonctionnel_.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julien-leplat/Prog_fonctionnel_/issues"
+  },
+  "homepage": "https://github.com/julien-leplat/Prog_fonctionnel_#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "xo": "^0.48.0"
+  }
+}

@@ -1,0 +1,6 @@
+#Ignoring node_modules files because of gulp
+node_modules/
+
+
+
+
