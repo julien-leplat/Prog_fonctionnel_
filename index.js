@@ -1,18 +1,18 @@
 import * as R from 'ramda';
-
 import fs from "fs";
+//import chiSqTest from 'chi-sq-test';
+import chiSquaredTest from 'chi-squared-test';
 
+//Import Functions from external files
 import {csvToJSON} from './csvToJSON.js';
+import {pca} from './pca.js';
 
 const csv = fs.readFileSync('./CSV_Files/Iris.csv', 'utf8')
-
 //const columns = ['Id','SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']
 
 const data = csvToJSON(csv);
 
-//import chiSqTest from 'chi-sq-test';
-import chiSquaredTest from 'chi-squared-test';
-
+//Chi Squared
 const splitIndex = R.pipe(
     R.converge(R.multiply(0.80), [R.length]),
     Math.round,
@@ -67,10 +67,7 @@ const values = getValues(trainingData);
 
 console.log(values);
 
-
 //PCA
-import {pca} from './pca.js';
-
 const pca_result = pca(data);
 console.log(pca_result);
 
