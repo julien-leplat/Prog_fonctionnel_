@@ -4,7 +4,7 @@ const csvToJSON = (csv) => {
     var array = csv.toString().split("\n");
     
     let result = [];
-    let headers = array[0].split(", ")
+    let headers = array[0].split(", ");
 
     for (let i = 1; i < array.length - 1; i++) {
         let obj = {}
@@ -35,7 +35,7 @@ const csvToJSON = (csv) => {
       }
        
       let json = JSON.stringify(result);
-      fs.writeFileSync('output.json', json);
+      fs.writeFileSync('iris.json', json);
 
       return json;
 }
