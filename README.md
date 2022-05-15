@@ -15,11 +15,11 @@ Clément Moing
 
 ## Documentations
 
-https://en.wikipedia.org/wiki/Travelling_salesman_problem
-
+Implementing PCA
 https://www.npmjs.com/package/pca-js
 
-
+For generating JSON File from CSV
+https://www.geeksforgeeks.org/how-to-convert-csv-to-json-file-having-comma-separated-values-in-node-js/
 
 ## Libraries
 
