@@ -24,8 +24,10 @@
     "xo": "^0.48.0"
   },
   "dependencies": {
+    "chai": "^4.3.6",
     "chi-sq-test": "^2.0.1",
     "chi-squared-test": "^1.1.0",
+    "mocha": "^10.0.0",
     "pca-js": "^1.0.2",
     "ramda": "^0.28.0"
   }

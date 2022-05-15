@@ -2,28 +2,13 @@ import * as R from 'ramda';
 
 import fs from "fs";
 
-//Read CSV file
+import {csvToJSON} from './csvToJSON.js';
+
 const csv = fs.readFileSync('./CSV_Files/Iris.csv', 'utf8')
-const columns = ['Id','SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']
 
-const csvToJson = R.compose(
-    R.map(R.compose(
-        R.evolve({episodes: Number}),
-        R.zipObj(columns),
-        R.split(',')
-    )),
-    R.split('\n')
-)(csv)
+//const columns = ['Id','SepalLengthCm','SepalWidthCm','PetalLengthCm','PetalWidthCm','Species']
 
-//console.log(data);
-
-//Generate JSON file from CSV file
-var lejson = JSON.stringify(csvToJson);
-console.log(lejson)
-fs.writeFile("iris.json", lejson, function(err, result) {
-    if(err) console.log('error', err);
-});
-
+const data = csvToJSON(csv);
 
 //import chiSqTest from 'chi-sq-test';
 import chiSquaredTest from 'chi-squared-test';
@@ -32,9 +17,6 @@ const splitIndex = R.pipe(
     R.converge(R.multiply(0.80), [R.length]),
     Math.round,
 );
-
-//Define variable data from JSON from CSV
-let data = csvToJson;
 
 const splitData = R.splitAt(splitIndex(data), data);
 
@@ -87,12 +69,11 @@ console.log(values);
 
 
 //PCA
-/*
 import {pca} from './pca.js';
 
 const pca_result = pca(data);
 console.log(pca_result);
-*/
+
 
 
 
