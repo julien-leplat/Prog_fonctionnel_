@@ -3,7 +3,7 @@
 ## Description
 
 
-### Travelling Salesman Problem
+### Data Loader Chi-Squared
 
 
 ## Contributions
@@ -12,10 +12,6 @@ Maxime Chardon
 Quentin Lecomte
 Julien Leplat
 Clément Moing
-
-## Documentations
-
-https://en.wikipedia.org/wiki/Travelling_salesman_problem
 
 ## Libraries
 
